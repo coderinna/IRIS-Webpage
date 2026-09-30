@@ -409,7 +409,7 @@ function Architecture() {
         </div>
 
         <div className="architecture__future-label">
-          Tulevaisuudessa
+          Tulevaisuudessa (jos on motivaatiota ja kiinnostusta)
         </div>
 
         <div className="architecture__future-grid">

@@ -41,6 +41,12 @@ function Hero() {
           designed from the protocol up.
         </p>
 
+<p className="hero__tribute">
+  🇫🇮 Suomesta, niinku alkuperäinenkin. ❤️ You are awesome, Jarkko!
+  <br />
+  🌸 Nyt tyttöjen tekemänä.
+</p>
+
         <div className="hero__stats">
           {heroStats.map((stat) => (
             <span

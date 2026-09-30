@@ -52,6 +52,18 @@
     drop-shadow(0 0 45px rgba(236, 72, 153, 0.25));
 }
 
+.hero__tribute {
+  margin: 1.25rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.hero__tribute br + * {
+  color: rgba(255, 180, 230, 0.9);
+}
 .hero__eyebrow {
   margin: 0 0 18px;
 
