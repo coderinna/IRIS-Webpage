@@ -156,25 +156,17 @@ Tämän repositorion omistaja vastaa koko IRIS-projektin toteutuksesta, mukaan l
 
 ## Extra
 
-IRIS IRC sisältää myös yhden ylimääräisen järjestelmän:
+IRIS IRC sisältää myös yhden ylimääräisen rasitteen:
 
 **💗 Cute Girl Tuning™.**
 
 Se ei paranna mitattavasti:
 
 * protokollan suorituskykyä, latenssia, muistinkäyttöä...
-* ... eikä yhtään mitäään oikeastaan.
+* ... eikä yhtään mitäään oikeastaan.  😊
 
 
 Mutta se parantaa huomattavasti vibaa.
-
-> 💅 **Suorituskyky:** kyseenalainen
-> 🔐 **Security:** vakava
-> 💜 **Vibat:** vastustamaton
-
-... ja tietty monimutkainen, sitä se ainakin on 😊.
-
-
 ## LISENSSI
 
 - [LICENSE](./LICENSE)
