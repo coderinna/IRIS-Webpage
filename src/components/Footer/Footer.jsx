@@ -5,12 +5,12 @@ function Footer() {
     <footer className="footer">
       <div className="footer__inner">
         <div>
-          <strong>🌸 IRIS</strong>
-          <span>Legendary IRC infrastructure.</span>
+          <strong>🌸 IRIS IRCd</strong>
+          <span>Internet Reley Chat Daemon</span>
         </div>
 
         <span>
-          Built with Node.js • React • Protocols
+          Powered by girls.
         </span>
 
 <span>

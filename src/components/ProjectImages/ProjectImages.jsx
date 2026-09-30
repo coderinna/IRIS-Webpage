@@ -4,6 +4,7 @@ import './ProjectImages.css';
 
 import IMG from './images/img1.png';
 import IMG2 from './images/img2.png';
+import IMG3 from './images/img3.png';
 
 const images = [
   {
@@ -22,7 +23,7 @@ const images = [
     id: 3,
     title: 'IRIS',
     description: 'and f*cking More debug hell',
-    image:  IMG2
+    image:  IMG3
   }
 ];
 

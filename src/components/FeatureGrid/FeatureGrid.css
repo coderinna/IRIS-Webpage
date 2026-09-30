@@ -35,6 +35,22 @@
   gap: 16px;
 }
 
+.features__subtitle {
+  margin: 1rem 0 0;
+
+  font-size: 1.75rem !important;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1;
+
+  color: #ff69b4;
+
+  text-transform: uppercase;
+  text-shadow:
+    0 0 12px rgba(255, 105, 180, 0.25),
+    0 0 24px rgba(255, 105, 180, 0.1);
+}
+
 .feature-card {
   min-height: 230px;
   padding: 26px;

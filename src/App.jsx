@@ -11,25 +11,25 @@ const features = [
     icon: '⚡',
     title: 'IRC Daemon',
     description:
-      'A custom Node.js IRC daemon built from the ground up.'
+        'Alusta asti itse rakennettu Node.js-pohjainen IRC-daemon.'
   },
   {
     icon: '🌐',
     title: 'IRIS-S2S',
     description:
-      'A custom server-to-server protocol connecting the IRIS network.'
+         'Oma server-to-server-protokolla, joka yhdistää IRIS-verkon palvelimet.'
   },
   {
     icon: '🧬',
     title: 'Distributed Network',
     description:
-      'Network state, identities, routing and synchronization across servers.'
+        'Verkon tila, identiteetit, reititys ja synkronointi palvelinten välillä.'
   },
   {
     icon: '🔐',
     title: 'Protocol First',
     description:
-      'Designed around explicit protocol frames, validation and state.'
+       'Rakennettu eksplisiittisten protokollakehysten, validoinnin ja tilan ympärille.'
   }
 ];
 

@@ -1,6 +1,8 @@
 // src/components/Architecture/Architecture.jsx
 
+import { useState } from 'react';
 import ArchitectureNode from './ArchitectureNode';
+import architectureRaw from './architectureRaw';
 import './Architecture.css';
 
 const clientTypes = [
@@ -118,6 +120,8 @@ const infrastructure = [
 ];
 
 function Architecture() {
+  const [showRawArchitecture, setShowRawArchitecture] = useState(false);
+
   return (
     <section id="architecture" className="architecture">
 
@@ -134,9 +138,33 @@ function Architecture() {
           From classic IRC clients to a distributed server-to-server
           network. Every layer has a defined responsibility.
         </p>
+
+<button
+  className="architecture__raw-button"
+  type="button"
+  onClick={() => setShowRawArchitecture((current) => !current)}
+>
+  {showRawArchitecture ? (
+    <>
+      Hide Raw Architecture <strong>ON</strong>
+    </>
+  ) : (
+    <>
+      Show Raw Architecture <strong>OFF</strong>
+    </>
+  )}
+</button>
       </div>
 
 
+   {showRawArchitecture ? (
+        <div className="architecture__raw-wrapper">
+          <pre className="architecture__raw">
+            {architectureRaw}
+          </pre>
+        </div>
+) : (
+  <>
       {/* CLIENTS */}
 
       <div className="architecture__clients">
@@ -217,6 +245,7 @@ function Architecture() {
         {/* IRC PROTOCOL */}
 
         <div className="architecture__internal-section">
+
           <ArchitectureNode
             name="IRC PROTOCOL"
             type="PROTOCOL"
@@ -233,6 +262,7 @@ function Architecture() {
 
             <span>...</span>
           </div>
+
         </div>
 
 
@@ -244,6 +274,7 @@ function Architecture() {
         {/* CORE */}
 
         <div className="architecture__internal-section">
+
           <ArchitectureNode
             name="CORE"
             type="SERVER STATE"
@@ -262,6 +293,7 @@ function Architecture() {
           <div className="architecture__core-note">
             CORE OWNS SERVER STATE
           </div>
+
         </div>
 
 
@@ -375,7 +407,6 @@ function Architecture() {
           IRIS server-to-server protocol.
         </p>
 
-
         <div className="architecture__network-servers">
 
           <div className="architecture__network-line architecture__network-line--top" />
@@ -424,7 +455,8 @@ function Architecture() {
         </div>
 
       </div>
-
+  </>
+)}
     </section>
   );
 }

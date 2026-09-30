@@ -1,33 +1,6 @@
-# 🌸 IRIS IRCd Webpage
+// src/components/Architecture/architectureRaw.js
 
-<p align="center">
- <a href="https://github.com/NinaPaivinen/IRIS-Webpage">IRIS WEBPAGE</a> 
-&nbsp;&nbsp;·&nbsp;&nbsp; <a href="./LICENCE">LICENCE</a> &nbsp;&nbsp;·&nbsp;&nbsp; 
-<a href="./NETWORK.md">IRIS DISTRIBUTED NETWORK</a> &nbsp;&nbsp;·&nbsp;&nbsp;
- <a href="./PROTOCOL.md">IRIS S2S PROTOCOL</a> </p>
-
-Tämä on **IRIS Internet Reley Chat Daemon** = IRIS IRCd virallinen esittelysivu.
-
-
-Sivusto esittelee **IRIS IRCd:n**, **IRIS S2S -protokollan** sekä niiden muodostaman **hajautetun IRIS-verkkoarkkitehtuurin** ja sen toimintaa. IRIS on itse rakennettu IRC-daemon ja palvelinten välinen verkkoratkaisu, jossa perinteinen IRC yhdistyy moderniin hajautettuun verkkorakenteeseen **IRIS S2S -protokollan ja sitä hyödyntävän verkkimallin** kautta.
-
-
-Tällä hetkellä **IRIS-verkko on suljetun yhteisön käytössä**, ja itse IRIS-repository on yksityinen.
-
-*  Syyskuussa 2026 - IRIS saavutti merkittävän läpimurtonsa: useat IRC-clientit eri IRIS-palvelimilla pystyivät toimimaan keskenään saman verkon kautta.
-
-Kehitysvuosi: 2026 [kehitystila: **aktiivinen**].
-
-Tämän repositorion omistaja vastaa koko IRIS-projektin toteutuksesta, mukaan lukien IRIS-esittelysivun, IRC-daemonin, IRIS-S2S-protokollan ja hajautetun IRIS-verkon. 
-
-
-
-> **Classic IRC on the outside.  
-> IRIS Protocol on the inside.**
-
-❤️ It is all about this:
-
-```text
+const architectureRaw = `
                                       IRC CLIENTS
                          ┌─────────────────────────────────┐
                          │                                 │
@@ -131,50 +104,6 @@ Tämän repositorion omistaja vastaa koko IRIS-projektin toteutuksesta, mukaan l
       │             │      │ State       │      │ Performance │
       └─────────────┘      └─────────────┘      └─────────────┘
 
-```
+`;
 
-
-## Sanasto
-
-* **IRIS** = Projekti ja sen ympärille rakennettava IRC-ekosysteemi.
-* **IRIS IRCd** = IRISin varsinainen IRC-palvelinohjelmisto eli IRC-daemon.
-* **IRCd** = *Internet Relay Chat daemon*. IRC-palvelinohjelmisto, joka vastaanottaa client-yhteyksiä ja käsittelee IRC-liikennettä.
-* **Classic IRC** = Perinteinen IRC-protokolla, jota IRIS tarjoaa yhteensopivana client-rajapintana.
-* **IRIS Protocol** = IRIS-projektia varten suunniteltu palvelinten välinen protokolla.
-* **S2S** = *Server-to-Server*. Palvelinten välinen kommunikaatio.
-* **IRIS S2S** = IRIS-palvelinten välinen verkkomalli ja siihen liittyvä kommunikaatiokerros.
-* **IRIS Network** = Useista IRIS-palvelimista muodostuva IRC-verkko.
-* **IRC Client** = IRC-asiakasohjelma, kuten irssi, WeeChat tai HexChat.
-* **IRC Server** = IRIS IRCd -palvelin, joka osallistuu IRC-verkon toimintaan.
-* **Server Link** = Kahden IRIS-palvelimen välinen yhteys IRIS Protocolin kautta.
-* **Network State** = Verkossa ylläpidettävä tieto käyttäjistä, kanavista, palvelimista ja niiden tilasta.
-* **Event Bus** = IRISin sisäinen tapahtumaväylä, jonka kautta järjestelmän komponentit kommunikoivat tapahtumien avulla.
-* **Core** = IRISin ydinlogiikka ja palvelimen tilasta vastaava kerros.
-* **Services** = IRC-palvelut, kuten NickServ, ChanServ ja operointiin liittyvät palvelut.
-* **Transport** = Verkkoyhteyden kuljetuskerros, esimerkiksi TCP tai TLS.
-
-
-## Extra
-
-IRIS IRC sisältää myös yhden ylimääräisen järjestelmän:
-
-**💗 Cute Girl Tuning™.**
-
-Se ei paranna mitattavasti:
-
-* protokollan suorituskykyä, latenssia, muistinkäyttöä...
-* ... eikä yhtään mitäään oikeastaan.
-
-
-Mutta se parantaa huomattavasti vibaa.
-
-> 💅 **Suorituskyky:** kyseenalainen
-> 🔐 **Security:** vakava
-> 💜 **Vibat:** vastustamaton
-
-... ja tietty monimutkainen, sitä se ainakin on 😊.
-
-
-## LISENSSI
-
-- [LICENSE](./LICENSE)
+export default architectureRaw;

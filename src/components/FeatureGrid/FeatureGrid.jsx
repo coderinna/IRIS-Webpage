@@ -7,15 +7,18 @@ function FeatureGrid({ features }) {
       id="protocol"
       className="features"
     >
-      <div className="features__header">
-        <p>THE IRIS STACK</p>
+<div className="features__header"> 
+<p>THE IRIS STACK</p> 
 
-        <h2>
-          Built around the
-          <span> protocol.</span>
-        </h2>
-      </div>
+<h2>
+  Built around our own{' '}
+  <span>protocol.</span>
+</h2>
 
+<div className="features__subtitle">
+  IRIS-S2S PROTOCOL
+</div>
+</div>
       <div className="features__grid">
         {features.map((feature) => (
           <FeatureCard
