@@ -24,4 +24,5 @@ dist-ssr
 *.sw?
 
 
-.notices.md
+.help.md
+help.md

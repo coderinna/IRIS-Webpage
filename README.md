@@ -8,6 +8,10 @@ IRIS on itse rakennettu IRC-daemon ja server-to-server-verkko, jossa perinteinen
 
 Tällä hetkellä **IRIS-verkko on suljetun yhteisön käytössä**, ja itse IRIS-repository on yksityinen.
 
+Syyskuussa 2026 IRIS saavutti merkittävän läpimurtonsa: useat IRC-clientit eri IRIS-palvelimilla pystyivät toimimaan keskenään saman verkon kautta.
+
+Kehitysvuosi: 2026.
+
 ❤️ It is all about this:
 
 ```text
