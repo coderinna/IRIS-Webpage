@@ -12,6 +12,8 @@ Syyskuussa 2026 IRIS saavutti merkittävän läpimurtonsa: useat IRC-clientit er
 
 Kehitysvuosi: 2026.
 
+Tämän repositorion omistaja vastaa koko IRIS-projektin toteutuksesta, mukaan lukien IRIS-esittelysivun, IRC-daemonin, IRIS-S2S-protokollan ja hajautetun IRIS-verkon. 
+
 ❤️ It is all about this:
 
 ```text
