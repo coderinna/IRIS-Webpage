@@ -1,0 +1,261 @@
+/* src/components/Architecture/ArchitectureNode.css */
+
+.architecture-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 220px;
+  min-height: 110px;
+  padding: 24px 28px;
+
+  border: 1px solid rgba(217, 70, 239, 0.35);
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(124, 58, 237, 0.16),
+      rgba(236, 72, 153, 0.08)
+    );
+
+  box-shadow:
+    0 0 30px rgba(124, 58, 237, 0.12),
+    inset 0 0 30px rgba(236, 72, 153, 0.04);
+
+  backdrop-filter: blur(12px);
+
+  text-align: center;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.architecture-node:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(236, 72, 153, 0.7);
+
+  box-shadow:
+    0 0 35px rgba(217, 70, 239, 0.25),
+    0 0 70px rgba(236, 72, 153, 0.08),
+    inset 0 0 30px rgba(236, 72, 153, 0.06);
+}
+
+
+/* Node type */
+
+.architecture-node__type {
+  margin-bottom: 8px;
+
+  color: #d946ef;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+
+/* Node name */
+
+.architecture-node__name {
+  display: block;
+
+  color: #fdf4ff;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+
+/* Node description */
+
+.architecture-node__description {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #c9b8d5;
+
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+
+/* --------------------------------
+   Node variants
+-------------------------------- */
+
+.architecture-node--client {
+  border-color: rgba(249, 168, 212, 0.35);
+}
+
+.architecture-node--client .architecture-node__type {
+  color: #f9a8d4;
+}
+
+
+.architecture-node--ircd {
+  border-color: rgba(124, 58, 237, 0.55);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(124, 58, 237, 0.24),
+      rgba(147, 51, 234, 0.1)
+    );
+}
+
+.architecture-node--ircd .architecture-node__type {
+  color: #a78bfa;
+}
+
+
+.architecture-node--s2s {
+  border-color: rgba(217, 70, 239, 0.65);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(217, 70, 239, 0.2),
+      rgba(236, 72, 153, 0.1)
+    );
+
+  box-shadow:
+    0 0 35px rgba(217, 70, 239, 0.2),
+    inset 0 0 30px rgba(236, 72, 153, 0.05);
+}
+
+.architecture-node--s2s .architecture-node__type {
+  color: #e879f9;
+}
+
+
+.architecture-node--server {
+  min-width: 170px;
+  min-height: 90px;
+
+  padding: 20px;
+
+  border-color: rgba(147, 51, 234, 0.4);
+}
+
+.architecture-node--server .architecture-node__type {
+  color: #c084fc;
+}
+
+.architecture-node--server .architecture-node__name {
+  font-size: 1.05rem;
+}
+
+
+.architecture-node--network {
+  min-width: 280px;
+
+  border-color: rgba(236, 72, 153, 0.65);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(124, 58, 237, 0.2),
+      rgba(236, 72, 153, 0.15)
+    );
+
+  box-shadow:
+    0 0 40px rgba(236, 72, 153, 0.2),
+    0 0 80px rgba(124, 58, 237, 0.1),
+    inset 0 0 35px rgba(236, 72, 153, 0.06);
+}
+
+.architecture-node--network .architecture-node__type {
+  color: #f472b6;
+}
+
+
+/* --------------------------------
+   Responsive
+-------------------------------- */
+
+@media (max-width: 768px) {
+  .architecture-node {
+    min-width: 180px;
+    min-height: 100px;
+    padding: 20px;
+  }
+
+  .architecture-node__name {
+    font-size: 1.1rem;
+  }
+
+  .architecture-node__description {
+    font-size: 0.78rem;
+  }
+
+  .architecture-node--server {
+    min-width: 140px;
+  }
+
+  .architecture-node--network {
+    min-width: 220px;
+  }
+}
+
+.architecture-node--network-layer {
+  width: 100%;
+  border-color: rgba(124, 58, 237, 0.45);
+}
+
+.architecture-node--network-layer .architecture-node__type {
+  color: #a78bfa;
+}
+
+
+.architecture-node--protocol {
+  width: 100%;
+  border-color: rgba(217, 70, 239, 0.45);
+}
+
+.architecture-node--protocol .architecture-node__type {
+  color: #e879f9;
+}
+
+
+.architecture-node--core {
+  width: 100%;
+  border-color: rgba(236, 72, 153, 0.4);
+}
+
+.architecture-node--core .architecture-node__type {
+  color: #f472b6;
+}
+
+
+.architecture-node--event {
+  width: 100%;
+  border-color: rgba(249, 168, 212, 0.4);
+}
+
+.architecture-node--event .architecture-node__type {
+  color: #f9a8d4;
+}
+
+
+.architecture-node--database {
+  min-height: 120px;
+
+  border-style: dashed;
+
+  border-color: rgba(167, 139, 250, 0.3);
+
+  opacity: 0.8;
+}
+
+.architecture-node--database .architecture-node__type {
+  color: #a78bfa;
+}
