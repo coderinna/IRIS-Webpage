@@ -12,6 +12,10 @@ function Footer() {
         <span>
           Built with Node.js • React • Protocols
         </span>
+
+<span>
+  © {new Date().getFullYear()} IRIS. All rights reserved.
+</span>
       </div>
     </footer>
   );
