@@ -1,0 +1,186 @@
+# IRIS License 1.0
+
+**Copyright © 2026 IRIS IRC Project**
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, subject to the following conditions:
+
+1. **Attribution**
+
+   The above copyright notice and this license notice shall be included in
+   all copies or substantial portions of the Software.
+
+2. **Project Attribution**
+
+   Redistributions of the Software, whether modified or unmodified, must
+   retain a clear reference to the original project:
+
+   **IRIS IRC**
+
+   and, where reasonably possible, a reference to the original project
+   repository.
+
+3. **Modified Versions**
+
+   Modified versions may be distributed under different terms, provided that
+   the original IRIS IRC copyright notice and this license remain applicable
+   to the original portions of the Software.
+
+   Modified versions must not falsely claim to be the official IRIS IRC
+   project.
+
+4. **Name and Identity**
+
+   The names **IRIS IRC**, **IRIS IRC Protocol**, and associated project
+   logos or trademarks may not be used to imply endorsement, sponsorship,
+   certification, or official status of a modified or third-party version
+   without prior permission.
+
+5. **Protocol Compatibility**
+
+   Implementations of the IRIS IRC Protocol are permitted.
+
+   Implementations may be independent projects and are not required to use
+   the IRIS IRC name.
+
+6. **Commercial Use**
+
+   Commercial use of the Software is expressly permitted.
+
+7. **No Warranty**
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+   IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+   DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+   OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+   USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+---
+
+**IRIS License 1.0**
+
+Copyright © 2026 IRIS IRC Project.
+
+"IRIS IRC" and "IRIS IRC Protocol" are project names and may be protected
+by applicable trademark or other laws independently of this license.
+
+
+# IRIS IRC Protocol License 1.0
+
+**Copyright © 2026 IRIS IRC Project**
+
+## 1. Permission
+
+Permission is hereby granted, free of charge, to any person or organization
+to implement, use, reproduce, document, test, extend, and distribute
+implementations of the **IRIS IRC Protocol**, subject to the terms of this
+license.
+
+This permission includes both non-commercial and commercial use.
+
+## 2. Independent Implementations
+
+Anyone may create an independent implementation of the IRIS IRC Protocol.
+
+An implementation:
+
+* may be open source or proprietary;
+* may be commercial or non-commercial;
+* may be modified or extended;
+* may be implemented in any programming language;
+* may run independently of the official IRIS IRC software.
+
+Use of the protocol does not require the implementation to use the IRIS IRC
+source code.
+
+## 3. Protocol Extensions
+
+Implementations may extend the IRIS IRC Protocol with additional commands,
+messages, capabilities, authentication mechanisms, services, or other
+functionality.
+
+Extensions should not be presented as part of the official IRIS IRC
+Protocol unless they have been accepted by the IRIS IRC Project.
+
+Implementations should clearly document protocol extensions that are not part
+of the official specification.
+
+## 4. Compatibility
+
+An implementation may claim compatibility with the IRIS IRC Protocol only
+to the extent that it actually implements the relevant parts of the
+specification.
+
+The IRIS IRC Project does not guarantee compatibility between independently
+developed implementations.
+
+## 5. Name and Branding
+
+The names:
+
+**IRIS IRC**
+
+and
+
+**IRIS IRC Protocol**
+
+refer to the original project and protocol specification.
+
+Use of these names must not falsely imply that an independent implementation
+is developed, maintained, certified, or endorsed by the IRIS IRC Project.
+
+Independent implementations may state, for example:
+
+> "Implements the IRIS IRC Protocol."
+
+but must not imply:
+
+> "Official IRIS IRC Server"
+
+without permission from the IRIS IRC Project.
+
+## 6. No Restriction on Implementation
+
+This license does not require an implementation to publish its source code.
+
+A proprietary or closed-source implementation of the IRIS IRC Protocol is
+permitted.
+
+## 7. No Warranty
+
+THE IRIS IRC PROTOCOL SPECIFICATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED.
+
+THE IRIS IRC PROJECT AND ITS AUTHORS SHALL NOT BE LIABLE FOR ANY DAMAGES,
+LOSSES, SECURITY ISSUES, SERVICE INTERRUPTIONS, OR OTHER LIABILITY ARISING
+FROM THE USE OR IMPLEMENTATION OF THE PROTOCOL.
+
+## 8. Specification Changes
+
+The IRIS IRC Project may publish new versions of the IRIS IRC Protocol
+specification.
+
+Existing implementations are not required to adopt a newer specification
+unless they choose to do so.
+
+Protocol versions should be explicitly identified where compatibility may
+differ.
+
+## 9. License Notice
+
+A copy of this license should accompany substantial redistributions of the
+IRIS IRC Protocol specification.
+
+Implementations are not required to include this license in their source
+code merely because they implement the protocol.
+
+---
+
+**IRIS IRC Protocol License 1.0**
+
+Copyright © 2026 IRIS IRC Project.
