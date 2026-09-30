@@ -1,16 +1,121 @@
-# React + Vite
+# 🌸 IRIS IRC Webpage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+IRIS IRC virallinen esittelysivu.
 
-Currently, two official plugins are available:
+Sivusto esittelee **IRIS IRCd**, **IRIS-S2S-protokollan** ja niiden muodostaman **hajautetun IRC-verkon arkkitehtuuria** ja toimintaa.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+IRIS on itse rakennettu IRC-daemon ja server-to-server-verkko, jossa perinteinen IRC yhdistyy moderniin hajautettuun verkkorakenteeseen.
 
-## React Compiler
+Tällä hetkellä **IRIS-verkko on suljetun yhteisön käytössä**, ja itse IRIS-repository on yksityinen.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+❤️ It is all about this:
 
-## Expanding the ESLint configuration
+```text
+                                      IRC CLIENTS
+                         ┌─────────────────────────────────┐
+                         │                                 │
+                         │  HexChat   irssi   WeeChat      │
+                         │  Web IRC   Bots   Services      │
+                         │                                 │
+                         └───────────────┬─────────────────┘
+                            │
+                            │
+              ┌─────────────┼─────────────┐
+              │             │             │
+          Direct TCP     TLS / SSL    SSH Tunnel
+              │             │             │
+              │             │        SSH → TCP
+              │             │        forwarding
+              └─────────────┼─────────────┘
+                            │
+                            ▼
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                              IRIS IRCd                                       │
+│                                                                              │
+│                         Classic IRC Protocol                                 │
+│                                                                              │
+│  ┌────────────────────────────────────────────────────────────────────────┐  │
+│  │                         NETWORK LAYER                                  │  │
+│  │                                                                        │  │
+│  │  TCP Listener → Connections → Sessions → Connection Lifecycle          │  │
+│  └────────────────────────────────┬───────────────────────────────────────┘  │
+│                                   │                                          │
+│                                   ▼                                          │
+│  ┌────────────────────────────────────────────────────────────────────────┐  │
+│  │                         IRC PROTOCOL                                   │  │
+│  │                                                                        │  │
+│  │ Parser → Validation → Command Router → Command Handler → Serializer   │  │
+│  │                                                                        │  │
+│  │ NICK USER JOIN PART PRIVMSG NOTICE MODE QUIT ...                      │  │
+│  └────────────────────────────────┬───────────────────────────────────────┘  │
+│                                   │                                          │
+│                                   ▼                                          │
+│  ┌────────────────────────────────────────────────────────────────────────┐  │
+│  │                              CORE                                      │  │
+│  │                                                                        │  │
+│  │ Users · Nicknames · Channels · Permissions                            │  │
+│  │ Sessions · Membership · Modes · Server State                          │  │
+│  │                                                                        │  │
+│  │                    CORE OWNS SERVER STATE                              │  │
+│  └────────────────────────────────┬───────────────────────────────────────┘  │
+│                                   │                                          │
+│                              Domain Events                                   │
+│                                   ▼                                          │
+│  ┌────────────────────────────────────────────────────────────────────────┐  │
+│  │                           EVENT BUS                                    │  │
+│  │                                                                        │  │
+│  │ connection · user.created · nick.changed · channel.joined              │  │
+│  │ message.sent · user.quit · channel.changed · server.connected           │  │
+│  └──────────────┬─────────────────┬─────────────────┬─────────────────────┘  │
+│                 │                 │                 │                        │
+│                 ▼                 ▼                 ▼                        │
+│          ┌──────────────┐  ┌──────────────┐  ┌──────────────────────────┐    │
+│          │   SERVICES   │  │ OBSERVABILITY│  │       IRIS S2S            │    │
+│          │              │  │              │  │                          │    │
+│          │ NickServ     │  │ Logging      │  │ Link Manager             │    │
+│          │ ChanServ     │  │ Metrics      │  │ S2S Connections           │    │
+│          │ Oper/Admin   │  │ Telemetry    │  │ IRIS Protocol            │    │
+│          │ Future       │  │ Health       │  │ Handshake                 │    │
+│          └──────────────┘  └──────────────┘  │ Authentication             │    │
+│                                              │ Capability negotiation     │    │
+│                                              │ Sync / Routing             │    │
+│                                              └──────────────┬────────────┘    │
+└─────────────────────────────────────────────────────────────┼────────────────┘
+                                                              │
+                                                              │ IRIS Protocol
+                                                              ▼
+                              ┌───────────────────────────────────────────────┐
+                              │                 IRIS NETWORK                  │
+                              │                                               │
+                              │       ┌────────────┐      ┌────────────┐      │
+                              │       │  IRIS IRC  │◄────►│  IRIS IRC  │      │
+                              │       │  SERVER A  │ IRIS│  SERVER B  │      │
+                              │       └──────┬─────┘      └──────┬─────┘      │
+                              │              │                    │           │
+                              │              │       IRIS        │           │
+                              │              └──────────┬─────────┘           │
+                              │                         ▼                     │
+                              │                  ┌────────────┐               │
+                              │                  │  IRIS IRC  │               │
+                              │                  │  SERVER C  │               │
+                              │                  └────────────┘               │
+                              └───────────────────────────────────────────────┘
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+                     PERSISTENCE / INFRASTRUCTURE (Tulevaisuudessa)
+                                  │
+             ┌────────────────────┼────────────────────┐
+             │                    │                    │
+             ▼                    ▼                    ▼
+      ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
+      │ PostgreSQL  │      │    Redis    │      │  Metrics /  │
+      │             │      │             │      │  Telemetry  │
+      │ Persistent  │      │ Cache /     │      │             │
+      │ State       │      │ Temporary   │      │ Health /    │
+      │             │      │ State       │      │ Performance │
+      └─────────────┘      └─────────────┘      └─────────────┘
+
+```
+
+## LISENSSI
+
+- [LICENSE](./LICENSE)
