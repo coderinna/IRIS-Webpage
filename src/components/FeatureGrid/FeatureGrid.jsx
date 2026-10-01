@@ -1,10 +1,33 @@
 import FeatureCard from './FeatureCard.jsx';
 import './FeatureGrid.css';
 
-function FeatureGrid({ features }) {
+function FeatureGrid({}) {
+
+const features = [
+  {
+    icon: '⚡',
+    title: 'IRC Daemon',
+    description:
+        'Alusta asti itse rakennettu Node.js-pohjainen IRC-daemon.'
+  },
+  {
+    icon: '🌐',
+    title: 'IRIS-S2S-PROTOCOL',
+    description:
+         'Oma server-to-server-protokolla, joka yhdistää IRIS-verkon palvelimet.'
+  },
+  {
+    icon: '🧬',
+    title: 'Distributed Network',
+    description:
+        'Verkon tila, identiteetit, reititys ja synkronointi palvelinten välillä.'
+  },
+];
+
+
   return (
     <section
-      id="protocol"
+      id="non"
       className="features"
     >
 <div className="features__header"> 

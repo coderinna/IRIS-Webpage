@@ -28,24 +28,25 @@ function Hero() {
         </div>
 
         <p className="hero__eyebrow">
-          🌸 LEGENDARY IRIS
+          🌸BECAUSE IRC IS LEGEND
         </p>
 
         <h1 className="hero__title">
-          Modern IRC.
-          <span> Distributed.</span>
+         IRIS IRC
+          <span>DAEMON</span>
         </h1>
 
         <p className="hero__description">
-          A custom IRC daemon and server-to-server network
-          designed from the protocol up.
+    ”IRIS Internet Reley Chat Daemon ja server-server -verkko,
+     joka on suunniteltu omasta S2S-protokollasta lähtien.”
+
         </p>
 
 <p className="hero__tribute">
   🇫🇮 Suomesta, niinku alkuperäinenkin. ❤️ You are awesome, Jarkko!
-  <br />
-  🌸 Nyt tyttöjen tekemänä.
-</p>
+  <br /></p>
+
+  🌸 Tyttöjen tekemä IRCd.
 
         <div className="hero__stats">
           {heroStats.map((stat) => (

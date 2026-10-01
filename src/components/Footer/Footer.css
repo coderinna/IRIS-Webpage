@@ -51,6 +51,11 @@
   letter-spacing: 0.08em;
 }
 
+.footer__link{
+  color: #8b11c7;
+}
+
+
 .footer__profile {
   display: block;
 

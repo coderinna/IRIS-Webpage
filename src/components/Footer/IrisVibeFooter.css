@@ -1,0 +1,65 @@
+.iris-vibe-footer {
+  background: #1a1a24;
+  padding: 20px 24px 40px 24px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  text-align: center;
+}
+
+.iris-vibe-footer__content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.iris-vibe-footer__divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #2d2d3d, #ff79c6, #2d2d3d, transparent);
+  margin-bottom: 24px;
+}
+
+.iris-vibe-footer__extra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.iris-vibe-footer__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ff79c6;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.iris-vibe-footer__heart {
+  display: inline-block;
+  animation: irisHeartPulse 2.5s infinite ease-in-out;
+}
+
+.iris-vibe-footer__text {
+  font-size: 0.9rem;
+  color: #6272a4;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 550px;
+}
+
+.iris-vibe-footer__vibe {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  font-style: italic;
+  font-weight: 500;
+  margin: 4px 0 0 0;
+}
+
+@keyframes irisHeartPulse {
+  0% { transform: scale(1); }
+  12% { transform: scale(1.15); }
+  25% { transform: scale(1); }
+  37% { transform: scale(1.15); }
+  50% { transform: scale(1); }
+  100% { transform: scale(1); }
+}

@@ -43,8 +43,7 @@ function ProjectImages() {
         </h2>
 
         <p className="project-images__description">
-          Screenshots, architecture views and development
-          snapshots from the IRIS project.
+       Kuvia matkan varrelta IRIS projectista.
         </p>
       </div>
 

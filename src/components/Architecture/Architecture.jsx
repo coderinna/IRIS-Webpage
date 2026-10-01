@@ -131,12 +131,13 @@ function Architecture() {
         </span>
 
         <h2 className="architecture__title">
-          Inside <span>Legendary IRIS</span>
+          Inside <span>IRC IRIS</span>
         </h2>
 
         <p className="architecture__description">
-          From classic IRC clients to a distributed server-to-server
-          network. Every layer has a defined responsibility.
+Klassisista IRC-asiakasohjelmista hajautettuun palvelimien väliseen (server-to-server) verkkoon.
+ Jokaisella tasolla on määritelty vastuualueensa.
+
         </p>
 
 <button

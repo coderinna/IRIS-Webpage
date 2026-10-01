@@ -21,6 +21,13 @@ function Footer() {
             alt="Coderinna"
             className="footer__profile"
           />
+          <p>Lead Engineer:         
+            {" "}  @<a
+              href={`https://github.com/coderinna/`}
+              className="footer__link"
+            >
+             coderinna
+            </a></p>
         </div>
 
         <div className="footer__copyright">

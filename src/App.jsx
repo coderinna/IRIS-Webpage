@@ -1,37 +1,15 @@
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Architecture from './components/Architecture/Architecture.jsx';
+import Protocol from './components/Protocol/Protocol.jsx';
 import FeatureGrid from './components/FeatureGrid/FeatureGrid';
 import ProjectImages from './components/ProjectImages/ProjectImages.jsx';
 import Footer from './components/Footer/Footer';
-import './App.css';
+import Licence from './components/Licence/Licence.jsx';
+import Sanasto from './components/Sanasto/Sanasto.jsx';
+import Footer2 from './components/Footer/Footer2.jsx';
 
-const features = [
-  {
-    icon: '⚡',
-    title: 'IRC Daemon',
-    description:
-        'Alusta asti itse rakennettu Node.js-pohjainen IRC-daemon.'
-  },
-  {
-    icon: '🌐',
-    title: 'IRIS-S2S',
-    description:
-         'Oma server-to-server-protokolla, joka yhdistää IRIS-verkon palvelimet.'
-  },
-  {
-    icon: '🧬',
-    title: 'Distributed Network',
-    description:
-        'Verkon tila, identiteetit, reititys ja synkronointi palvelinten välillä.'
-  },
-  {
-    icon: '🔐',
-    title: 'Protocol First',
-    description:
-       'Rakennettu eksplisiittisten protokollakehysten, validoinnin ja tilan ympärille.'
-  }
-];
+import './App.css';
 
 function App() {
   return (
@@ -43,12 +21,16 @@ function App() {
 
       <main>
         <Hero />
+        <FeatureGrid />
         <Architecture />
+        <Protocol />
         <ProjectImages/>
-        <FeatureGrid features={features} />
+        <Sanasto/>
+        <Licence/>
       </main>
 
       <Footer />
+      <Footer2 />
     </div>
   );
 }

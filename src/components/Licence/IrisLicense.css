@@ -1,0 +1,97 @@
+.iris-license {
+  background: #1a1a24;
+  color: #e2e8f0;
+  border: 1px solid #ff79c6;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 650px;
+  margin: 20px auto;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  box-shadow: 0 8px 32px rgba(255, 121, 198, 0.15);
+}
+
+.iris-license__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #2d2d3d;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.iris-license__icon {
+  font-size: 1.5rem;
+}
+
+.iris-license__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.iris-license__badge {
+  margin-left: auto;
+  background: rgba(255, 121, 198, 0.2);
+  color: #ff79c6;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.iris-license__body {
+  line-height: 1.6;
+}
+
+.iris-license__intro {
+  font-size: 1.1rem;
+  color: #ff79c6;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.iris-license__terms {
+  font-size: 0.95rem;
+  color: #a0aec0;
+}
+
+.iris-license__terms p {
+  margin: 12px 0;
+}
+
+.iris-license__notice {
+  background: #251f2c;
+  border-left: 4px solid #ff5555;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin: 20px 0;
+  color: #f8f8f2;
+}
+
+.iris-license__tuning {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #2d2d3d;
+  font-size: 0.85rem;
+  color: #6272a4;
+}
+
+.iris-license__heart {
+  display: inline-block;
+  animation: irisPulse 2s infinite;
+}
+
+@keyframes irisPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
