@@ -25,7 +25,7 @@ IRIS on itse rakennettu IRC-daemon ja palvelinten välinen verkkoratkaisu, jossa
 * Verkon tila: **Suljetun yhteisön** käytössä tällä hetkellä
 * Repository: **Yksityinen**
 * Omistaja: Tämän repositorion omistaja
-* Tekijä: Tämän  repositorion omistaja
+* Kehittäjä: Tämän  repositorion omistaja
 
 
 ```text

@@ -1,5 +1,6 @@
 import logo from '../../assets/logo.png';
 import './Hero.css';
+import networkImage from './IRIS.png';
 
 const heroStats = [
   'IRC Daemon',
@@ -23,9 +24,10 @@ function Hero() {
       <div className="hero__glow hero__glow--right" />
 
       <div className="hero__content">
-        <div className="hero__logo">
-          <img src={logo} alt="Legendary IRIS" />
-        </div>
+<div className="hero__logo">
+  <img src={logo} alt="Legendary IRIS" />
+</div>
+
 
         <p className="hero__eyebrow">
           🌸BECAUSE IRC IS LEGEND
@@ -59,6 +61,12 @@ function Hero() {
           ))}
         </div>
 
+<div className="hero__image">
+  <img
+    src={networkImage}
+    alt="IRIS distributed network architecture"
+  />
+</div>
         <div className="hero__actions">
           <button
             className="hero__button hero__button--primary"
