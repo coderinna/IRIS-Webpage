@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://coderinna.github.io/IRIS-Webpage/sitemap.xml
