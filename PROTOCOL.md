@@ -1,7 +1,7 @@
 
 # IRIS S2S Protocol
 
-IRIS-S2S on palvelinten välinen protokolla, **ei** IRC-clientin protokolla.
+IRIS-S2S on palvelinten välinen protokolla, **ei** IRC-clientin protokolla..
 
 | Ominaisuus | Arvo |
 |---|---|
