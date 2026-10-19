@@ -1,8 +1,13 @@
 # 🌸 IRIS IRCd Webpage
 
 <p align="center">
+<<<<<<< HEAD
  <a href="https://coderinna.github.io/IRIS-Webpage">IRIS WEBPAGE</a> 
 &nbsp;&nbsp;·&nbsp;&nbsp; <a href="LICENSE">LICENCE</a> &nbsp;&nbsp;·&nbsp;&nbsp; 
+=======
+ <a href="https://github.com/coderinna/IRIS-Webpage">IRIS WEBPAGE</a> 
+&nbsp;&nbsp;·&nbsp;&nbsp; <a href="./LICENCE">LICENCE</a> &nbsp;&nbsp;·&nbsp;&nbsp; 
+>>>>>>> 1c62258 (commit)
 <a href="./NETWORK.md">IRIS DISTRIBUTED NETWORK</a> &nbsp;&nbsp;·&nbsp;&nbsp;
  <a href="./PROTOCOL.md">IRIS S2S PROTOCOL</a>
   <a href="./SANASTO.md">SANASTO</a>
