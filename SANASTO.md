@@ -16,5 +16,5 @@
 * **Event Bus** = IRISin sisäinen tapahtumaväylä, jonka kautta järjestelmän komponentit kommunikoivat tapahtumien avulla.
 * **Core** = IRISin ydinlogiikka ja palvelimen tilasta vastaava kerros.
 * **Services** = IRC-palvelut, kuten NickServ, ChanServ ja operointiin liittyvät palvelut.
-* **Transport** = Verkkoyhteyden kuljetuskerros, esimerkiksi TCP tai TLS.
+* **Transport** = Verkkoyhteyden kuljetuskerros, esimerkiksi TCP tai TLS.r
 
