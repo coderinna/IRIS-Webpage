@@ -41,7 +41,7 @@ const messageGroups = [
 ];
 
   return (
-    <section className="protocol-messages-section">
+    <section className="protocol_section-card">
       <div className="section-card ">
         <span className="section-number">02</span>
 

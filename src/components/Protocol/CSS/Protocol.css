@@ -18,6 +18,14 @@
 }
 
 
+.protocol_section-card {
+  position: relative;
+  overflow: hidden;
+  padding:40px;
+  border-radius: 18px;
+  
+}
+
 
 .section-card {
   display: flex;
