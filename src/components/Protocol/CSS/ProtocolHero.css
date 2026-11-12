@@ -1,0 +1,139 @@
+.protocol-hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(20, 25, 38, 0.95),
+      rgba(8, 10, 15, 1)
+    );
+}
+
+.protocol-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+  background-size: 40px 40px;
+  mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.protocol-hero::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(79, 111, 255, 0.13);
+  filter: blur(100px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.protocol-hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 110px 0 90px;
+}
+
+.protocol-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  color: #7d9aff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.protocol-label::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6e8cff;
+  box-shadow: 0 0 14px rgba(110, 140, 255, 0.8);
+}
+
+.protocol-hero h1 {
+  margin: 0;
+  max-width: 850px;
+  font-size: clamp(42px, 7vw, 78px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 800;
+}
+
+.protocol-hero p {
+  max-width: 620px;
+  margin: 28px 0 0;
+  color: #aeb5c5;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.protocol-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 34px;
+}
+
+.protocol-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 13px;
+  border: 1px solid rgba(120, 145, 255, 0.25);
+  border-radius: 999px;
+  background: rgba(100, 125, 255, 0.07);
+  color: #aebdff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 600px) {
+  .protocol-hero-content {
+    width: min(100% - 28px, 1100px);
+    padding: 80px 0 65px;
+  }
+
+  .protocol-hero h1 {
+    font-size: 43px;
+  }
+
+  .protocol-hero p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .protocol-badge-row {
+    gap: 7px;
+  }
+
+  .protocol-badge {
+    font-size: 10px;
+  }
+
+  .protocol-hero h1 {
+    font-size: 38px;
+  }
+}

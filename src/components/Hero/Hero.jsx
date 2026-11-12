@@ -1,6 +1,7 @@
 import logo from '../../assets/logo.png';
 import './Hero.css';
 import networkImage from './IRIS.png';
+import hereImage from './Screenshot-IRIS1.png'
 
 const heroStats = [
   'IRC Daemon',
@@ -23,7 +24,13 @@ function Hero() {
       <div className="hero__glow hero__glow--left" />
       <div className="hero__glow hero__glow--right" />
 
+<div className="hero__main_image">
+  <img src={hereImage} alt="Legendary IRIS" />
+</div>
+
       <div className="hero__content">
+
+
 <div className="hero__logo">
   <img src={logo} alt="Legendary IRIS" />
 </div>
@@ -39,8 +46,8 @@ function Hero() {
         </h1>
 
         <p className="hero__description">
-    ”IRIS Internet Reley Chat Daemon ja server-server -verkko,
-     joka on suunniteltu omasta S2S-protokollasta lähtien.”
+    IRIS Internet Reley Chat Daemon ja server-server -verkko,
+     joka on suunniteltu omasta S2S-protokollasta lähtien.
 
         </p>
 
@@ -48,7 +55,7 @@ function Hero() {
   🇫🇮 Suomesta, niinku alkuperäinenkin. ❤️ You are awesome, Jarkko!
   <br /></p>
 
-  🌸 Tyttöjen tekemä IRCd.
+  🌸 Tyttöjen tekemä IRCd. ^^
 
         <div className="hero__stats">
           {heroStats.map((stat) => (

@@ -1,0 +1,88 @@
+.message-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+.message-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.message-group-heading {
+  padding-left: 14px;
+  border-left: 3px solid var(--iris-purple);
+}
+
+.message-group-heading h3 {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--iris-light-pink);
+}
+
+.message-group-heading p {
+  margin: 5px 0 0;
+  font-size: 0.85rem;
+  color: var(--iris-text-soft);
+}
+
+.message-table-wrapper {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.message-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.message-table th {
+  padding: 16px 22px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #858da0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.message-table td {
+  padding: 16px 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.message-table tbody tr {
+  transition: background 160ms ease;
+}
+
+.message-table tbody tr:hover {
+  background: rgba(100, 125, 255, 0.045);
+}
+
+.message-type {
+  color: #e9ecf5;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono",
+    monospace;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.message-table code {
+  color: #849aff;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono",
+    monospace;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .message-table th,
+  .message-table td {
+    padding: 14px 16px;
+  }
+}

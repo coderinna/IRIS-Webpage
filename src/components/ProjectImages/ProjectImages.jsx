@@ -11,6 +11,10 @@ import IMG6 from './images/im9.png';
 import IMG7 from './images/img4.png';
 import IMG8 from './images/im6.png';
 
+import IMG_7 from './images/img5.png';
+import IMG_8 from './images/img6.png';
+import IMG_9 from './images/img7.png';
+
 const images = [
   {
     id: 1,
@@ -51,14 +55,20 @@ const images = [
   {
     id: 7,
     title: 'IRIS',
-    description: 'Debug Torture — Yhdellä serverillä  rakentelu oli vielä suhteellisen kivuton. Kun mukaan tuli useita servereitä, debuggaus muuttui aivan eri tason touhuksi. Tässä tutkitaan clienttien liittymistä kanavalle, välillä ilmestyi duplikaatteja, joka bugi oli korjauksessa.',
-    image:  IMG7
+    description: 'Avaimella suojatun kanavan testailua.',
+    image:  IMG_7
   },
   {
     id: 8,
     title: 'IRIS',
-    description: 'Debug sex - client/channel state sync on lähtenyt toimimaan. S2S-yhteys hörisee. Rakentelu vaiheen ajoilta.',
-    image:  IMG8
+    description: 'Oppien testailua',
+    image:  IMG_8
+  },
+  {
+    id: 9,
+    title: 'IRIS',
+    description: 'TOPIC rakentelun ajoilta. Testattu oikeuksia.',
+    image:  IMG_9
   }
 ];
 

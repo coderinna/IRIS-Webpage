@@ -30,10 +30,8 @@ const navigation = [
 ];
 
 function Navbar() {
-  // Tila mobiilivalikon auki/kiinni-olemisen seurantaan
   const [isOpen, setIsOpen] = useState(false);
 
-  // Sulkee valikon, kun linkkiä klikataan (hyödyllinen anchor-linkeille)
   const handleLinkClick = () => {
     setIsOpen(false);
   };
@@ -46,7 +44,6 @@ function Navbar() {
           <span>IRIS</span>
         </a>
 
-        {/* Mobiililinkit saavat 'is-active' -luokan, kun valikko on auki */}
         <nav className={`navbar__links ${isOpen ? 'is-active' : ''}`}>
           {navigation.map((item) => (
             <a
@@ -60,7 +57,6 @@ function Navbar() {
           ))}
         </nav>
 
-        {/* Hampurilaisvalikon painike mobiililaitteille */}
         <button 
           className={`navbar__toggle ${isOpen ? 'is-active' : ''}`}
           onClick={() => setIsOpen(!isOpen)}

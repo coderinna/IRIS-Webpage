@@ -1,0 +1,44 @@
+.protocol-purpose {
+  padding-top: 80px;
+}
+.purpose-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(100, 125, 255, 0.12);
+  color: #8398ff;
+  font-size: 16px;
+}
+
+.purpose-card h2 {
+  margin: 7px 0 0;
+  color: #f7f8fc;
+  font-size: 24px;
+}
+
+.purpose-card p {
+  max-width: 760px;
+  margin: 14px 0 0;
+  color: #979fb1;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .protocol-purpose {
+    padding-top: 60px;
+  }
+
+  .purpose-card {
+    padding: 22px;
+    gap: 16px;
+  }
+
+  .purpose-card h2 {
+    font-size: 21px;
+  }
+}
