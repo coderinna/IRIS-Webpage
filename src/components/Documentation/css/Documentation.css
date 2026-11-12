@@ -1,0 +1,31 @@
+.iris-documentation {
+  min-height: 100vh;
+  background: #0b0b0b;
+  color: #ffffff;
+}
+
+.iris-documentation-layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  min-height: calc(100vh - 64px);
+}
+
+.iris-documentation-main {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.documentation-content {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .iris-documentation-layout {
+    display: block;
+    min-height: calc(100vh - 56px);
+  }
+
+  .iris-documentation-main {
+    width: 100%;
+  }
+}

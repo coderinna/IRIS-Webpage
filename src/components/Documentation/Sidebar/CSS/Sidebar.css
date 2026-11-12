@@ -1,0 +1,121 @@
+.iris-documentation-sidebar {
+  width: 250px;
+  min-width: 250px;
+  padding: 30px 20px;
+
+  background: #111111;
+  border-right: 1px solid #292929;
+}
+
+.iris-documentation-menu-toggle {
+  display: none;
+}
+
+.iris-documentation-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.iris-documentation-nav a {
+  display: block;
+  padding: 10px 12px;
+
+  color: #929292;
+  font-size: 13px;
+  text-decoration: none;
+
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.iris-documentation-nav a:hover {
+  color: #ffffff;
+  background: #202020;
+}
+
+@media (max-width: 700px) {
+  .iris-documentation-sidebar {
+    position: relative;
+    z-index: 1001;
+
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+
+    border-right: none;
+    border-bottom: 1px solid #292929;
+  }
+
+  .iris-documentation-menu-toggle {
+    width: 100%;
+    padding: 16px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #ffffff;
+    background: #111111;
+    border: none;
+
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .iris-documentation-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    display: none;
+    flex-direction: column;
+    gap: 2px;
+
+    padding: 12px 16px;
+
+    background: #111111;
+    border-bottom: 1px solid #292929;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  .iris-documentation-sidebar.is-open .iris-documentation-nav {
+    display: flex;
+  }
+}
+
+.iris-documentation-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  counter-reset: documentation-section;
+}
+
+.iris-documentation-nav a {
+  display: block;
+  padding: 10px 12px;
+
+  color: #e9e6e6;
+  font-size: 13px;
+  text-decoration: none;
+
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+
+  counter-increment: documentation-section;
+}
+
+.iris-documentation-nav a::before {
+  content: counter(documentation-section, decimal-leading-zero);
+  margin-right: 12px;
+  color: #c0b8bf;
+  font-size: 11px;
+}
+
+.iris-documentation-nav a:hover {
+  color: #ffffff;
+  background: #202020;
+}

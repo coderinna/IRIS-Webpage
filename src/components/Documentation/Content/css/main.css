@@ -1,0 +1,51 @@
+.documentation-content {
+  min-width: 0;
+}
+
+.documentation-content > section {
+  margin-bottom: 100px;
+}
+
+.documentation-content > section:last-child {
+  margin-bottom: 0;
+}
+
+.documentation-content h2 {
+  margin: 0 0 20px;
+}
+
+.documentation-content p {
+  max-width: 800px;
+
+  line-height: 1.7;
+}
+
+.documentation-section-number {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 12px;
+  letter-spacing: 0.08em;
+
+  opacity: 0.45;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .documentation-content > section {
+    margin-bottom: 70px;
+  }
+
+  .documentation-content h2 {
+    margin-bottom: 16px;
+  }
+
+  .documentation-content p {
+    line-height: 1.65;
+  }
+
+}

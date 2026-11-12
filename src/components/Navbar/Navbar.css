@@ -26,7 +26,7 @@
   font-size: 1.15rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  text-decoration: none; /* Varmistetaan ettei brändissä ole alleviivausta */
+  text-decoration: none;
 }
 
 .navbar__brand img {
@@ -50,7 +50,7 @@
 .navbar__link {
   color: var(--iris-text-soft);
   font-size: 1.1rem;
-  text-decoration: none; /* Varmistetaan puhdas ulkoasu */
+  text-decoration: none;
   transition:
     color 0.2s ease,
     text-shadow 0.2s ease;
@@ -61,14 +61,12 @@
   text-shadow: 0 0 18px rgba(236, 72, 153, 0.7);
 }
 
-/* --- MOBIILIVERSIO (max-width: 640px) --- */
 @media (max-width: 640px) {
   .navbar__inner {
     width: min(100% - 28px, 1200px);
-    min-height: 64px; /* Matalampi profiili mobiilissa */
+    min-height: 64px; 
   }
 
-  /* Hampurilaisvalikon painike */
   .navbar__toggle {
     display: flex;
     flex-direction: column;
@@ -89,14 +87,13 @@
     transition: all 0.3s ease;
   }
 
-  /* Muutetaan linkkilista koko ruudun peittäväksi mobiilivalikoksi */
   .navbar__links {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(8, 4, 15, 0.96); /* Tumma, läpinäkymätön Cute Girl Tuning™ teeman mukainen tausta */
+    background: rgba(8, 4, 15, 0.96); 
     backdrop-filter: blur(24px);
     
     flex-direction: column;
@@ -104,22 +101,19 @@
     align-items: center;
     gap: 40px;
     
-    /* Piilotetaan valikko ruudun yläpuolelle */
     transform: translateY(-100%);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 90;
   }
 
-  /* Kun valikko on auki Reactissa (isOpen = true) */
   .navbar__links.is-active {
     transform: translateY(0);
   }
 
   .navbar__link {
-    font-size: 1.5rem; /* Isompi koko sormella täpättäväksi */
+    font-size: 1.5rem; 
   }
 
-  /* Hampurilaisvalikon muuttuminen X-merkiksi */
   .navbar__toggle.is-active span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
     background-color: #fff;
@@ -135,9 +129,42 @@
   }
 }
 
-/* Piilotetaan hampurilaispainike kokonaan työpöytänäkymässä */
 @media (min-width: 641px) {
   .navbar__toggle {
     display: none;
+  }
+}
+
+
+.navbar__documentation-button {
+  padding: 9px 15px;
+  margin-left: 18px;
+
+  color: #d8d8d8;
+  background: transparent;
+
+  border: 1px solid #444;
+  border-radius: 5px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.navbar__documentation-button:hover {
+  color: #fff;
+  background: #252525;
+  border-color: #777;
+}
+
+@media (max-width: 700px) {
+  .navbar__documentation-button {
+    margin-left: auto;
+    padding: 8px 11px;
+    font-size: 11px;
   }
 }

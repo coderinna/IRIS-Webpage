@@ -29,44 +29,80 @@ const navigation = [
   }
 ];
 
-function Navbar() {
+function Navbar({
+  isDocumentSectionOpen,
+  setIsDocumentSectionOpen
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLinkClick = () => {
     setIsOpen(false);
   };
 
+const toggleDocumentation = () => {
+  const nextState = !isDocumentSectionOpen;
+
+  setIsDocumentSectionOpen(nextState);
+
+  window.location.hash = nextState ? 'documentation' : '';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  setIsOpen(false);
+};
+
   return (
     <header className="navbar">
       <div className="navbar__inner">
-        <a className="navbar__brand" href="/" onClick={handleLinkClick}>
+
+        <a
+          className="navbar__brand"
+          href="/"
+          onClick={(event) => {
+            event.preventDefault();
+            setIsDocumentSectionOpen(false);
+            handleLinkClick();
+          }}
+        >
           <img src={logo} alt="IRIS logo" />
           <span>IRIS</span>
         </a>
 
-        <nav className={`navbar__links ${isOpen ? 'is-active' : ''}`}>
-          {navigation.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="navbar__link"
-              onClick={handleLinkClick}
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
+        {!isDocumentSectionOpen && (
+          <>
+            <nav className={`navbar__links ${isOpen ? 'is-active' : ''}`}>
+              {navigation.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="navbar__link"
+                  onClick={handleLinkClick}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
 
-        <button 
-          className={`navbar__toggle ${isOpen ? 'is-active' : ''}`}
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Avaa valikko"
-          aria-expanded={isOpen}
+            <button
+              className={`navbar__toggle ${isOpen ? 'is-active' : ''}`}
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Avaa valikko"
+              aria-expanded={isOpen}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </>
+        )}
+
+        <button
+          className="navbar__documentation-button"
+          onClick={toggleDocumentation}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          {isDocumentSectionOpen
+            ? '← Takaisin sivustolle'
+            : 'Documentation ↗'}
         </button>
+
       </div>
     </header>
   );
