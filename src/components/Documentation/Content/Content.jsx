@@ -1,29 +1,37 @@
-
 import { useState, useEffect } from 'react';
 
 import Introduction from './Sections/Introduction/Introduction.jsx';
 import Security from './Sections/Security/Security.jsx';
+import IRC from './Sections/IRC/main.jsx';
 
 import './css/main.css';
 
 const documentationSections = {
   introduction: Introduction,
   security: Security,
+  irc: IRC
 };
 
 function DocumentationContent() {
+  const getHashParams = () => {
+    const query = window.location.hash.split('?')[1] || '';
+    return new URLSearchParams(query);
+  };
 
   const [currentPath, setCurrentPath] = useState(() => {
-    const query = window.location.hash.split('?')[1] || '';
-    return new URLSearchParams(query).get('path') || 'introduction';
+    return getHashParams().get('path') || 'introduction';
+  });
+
+  const [currentSection, setCurrentSection] = useState(() => {
+    return getHashParams().get('section') || '';
   });
 
   useEffect(() => {
     const handleHashChange = () => {
-      const query = window.location.hash.split('?')[1] || '';
-      const params = new URLSearchParams(query);
+      const params = getHashParams();
 
       setCurrentPath(params.get('path') || 'introduction');
+      setCurrentSection(params.get('section') || '');
     };
 
     window.addEventListener('hashchange', handleHashChange);
@@ -32,6 +40,19 @@ function DocumentationContent() {
       window.removeEventListener('hashchange', handleHashChange);
     };
   }, []);
+
+  useEffect(() => {
+    if (!currentSection) return;
+
+    const frame = requestAnimationFrame(() => {
+      document.getElementById(currentSection)?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [currentPath, currentSection]);
 
   const RenderComponent = documentationSections[currentPath];
 

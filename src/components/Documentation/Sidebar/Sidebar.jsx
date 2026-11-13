@@ -26,6 +26,7 @@ function DocumentationSidebar({ menuOpen, setMenuOpen }) {
       </button>
 <nav className="iris-documentation-nav">
   <a href="#documentation?path=introduction" onClick={closeMenu}>Johdanto</a>
+  <a href="#documentation?path=irc" onClick={closeMenu}>IRC</a>
   <a href="#documentation?path=architecture" onClick={closeMenu}>Arkkitehtuuri</a>
   <a href="#documentation?path=s2s-protocol" onClick={closeMenu}>S2S-protokolla</a>
   <a href="#documentation?path=authentication" onClick={closeMenu}>Palvelinten tunnistautuminen</a>

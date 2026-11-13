@@ -9,7 +9,7 @@ function Introduction() {
       <span className="documentation-section-number">
         01 </span>
 
-      <h2>Johdanto</h2>
+      <h1>Johdanto</h1>
 
       <p>
         IRIS on Node.js-ympäristössä toteutettu IRC-palvelinohjelmisto

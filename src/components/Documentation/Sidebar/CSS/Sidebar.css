@@ -15,18 +15,30 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  counter-reset: documentation-section;
 }
 
 .iris-documentation-nav a {
   display: block;
   padding: 10px 12px;
 
-  color: #929292;
+  color: #e9e6e6;
   font-size: 13px;
   text-decoration: none;
 
   border-radius: 4px;
   transition: color 0.2s, background 0.2s;
+
+  counter-increment: documentation-section;
+}
+
+.iris-documentation-nav a::before {
+  content: counter(documentation-section, decimal-leading-zero);
+  margin-right: 12px;
+
+  color: #c0b8bf;
+  font-size: 11px;
 }
 
 .iris-documentation-nav a:hover {
@@ -34,7 +46,9 @@
   background: #202020;
 }
 
+
 @media (max-width: 700px) {
+
   .iris-documentation-sidebar {
     position: relative;
     z-index: 1001;
@@ -84,38 +98,8 @@
   .iris-documentation-sidebar.is-open .iris-documentation-nav {
     display: flex;
   }
-}
 
-.iris-documentation-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  counter-reset: documentation-section;
-}
-
-.iris-documentation-nav a {
-  display: block;
-  padding: 10px 12px;
-
-  color: #e9e6e6;
-  font-size: 13px;
-  text-decoration: none;
-
-  border-radius: 4px;
-  transition: color 0.2s, background 0.2s;
-
-  counter-increment: documentation-section;
-}
-
-.iris-documentation-nav a::before {
-  content: counter(documentation-section, decimal-leading-zero);
-  margin-right: 12px;
-  color: #c0b8bf;
-  font-size: 11px;
-}
-
-.iris-documentation-nav a:hover {
-  color: #ffffff;
-  background: #202020;
+  .iris-documentation-nav a {
+    padding: 12px;
+  }
 }

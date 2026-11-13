@@ -1,8 +1,13 @@
 .documentation-content {
   min-width: 0;
+
+  counter-reset: main-section;
 }
 
+/* DOCUMENTATION SECTIONS */
+
 .documentation-content > section {
+  margin-left: 20px;
   margin-bottom: 100px;
 }
 
@@ -10,15 +15,65 @@
   margin-bottom: 0;
 }
 
+/* MAIN HEADINGS */
+
 .documentation-content h2 {
+  counter-increment: main-section;
+  counter-reset: sub-section;
+
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+
   margin: 0 0 20px;
 }
 
+.documentation-content h2::before {
+  content: counter(main-section, decimal-leading-zero);
+
+  flex-shrink: 0;
+  min-width: 28px;
+
+  font-size: 0.85em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+
+  opacity: 0.45;
+}
+
+/* SUBHEADINGS */
+
+.documentation-content h3 {
+  counter-increment: sub-section;
+
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+
+  margin: 32px 0 16px;
+}
+
+.documentation-content h3::before {
+  content: counter(main-section) "." counter(sub-section);
+
+  flex-shrink: 0;
+  min-width: 36px;
+
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  opacity: 0.45;
+}
+
+/* PARAGRAPHS */
+
 .documentation-content p {
   max-width: 800px;
-
   line-height: 1.7;
 }
+
+/* SECTION NUMBER */
 
 .documentation-section-number {
   display: block;
@@ -31,17 +86,31 @@
   opacity: 0.45;
 }
 
-
 /* MOBILE */
 
 @media (max-width: 700px) {
 
   .documentation-content > section {
+    margin-left: 10px;
     margin-bottom: 70px;
   }
 
   .documentation-content h2 {
+    gap: 8px;
     margin-bottom: 16px;
+  }
+
+  .documentation-content h2::before {
+    min-width: 24px;
+  }
+
+  .documentation-content h3 {
+    gap: 8px;
+    margin-top: 26px;
+  }
+
+  .documentation-content h3::before {
+    min-width: 32px;
   }
 
   .documentation-content p {

@@ -9,7 +9,7 @@ function Security() {
         07
       </span>
 
-      <h2>Tietoturva</h2>
+      <h1>Tietoturva</h1>
 
      <p>  Dokumentaatiota ei vielä tehty</p> 
 
