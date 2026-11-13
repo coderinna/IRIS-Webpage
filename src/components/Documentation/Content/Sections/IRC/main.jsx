@@ -25,7 +25,7 @@ function IRC() {
         Se mahdollistaa reaaliaikaisen viestinnän ja kanavien hallinnan
         yleisillä IRC-asiakasohjelmilla.
       </p>
-
+(kesken, raamit)
 <IRC_NAVBAR />
 
 

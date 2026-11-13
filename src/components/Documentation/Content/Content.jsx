@@ -3,13 +3,15 @@ import { useState, useEffect } from 'react';
 import Introduction from './Sections/Introduction/Introduction.jsx';
 import Security from './Sections/Security/Security.jsx';
 import IRC from './Sections/IRC/main.jsx';
+import IRISS2S from './Sections/IRIS-S2S/main.jsx';
 
 import './css/main.css';
 
 const documentationSections = {
   introduction: Introduction,
   security: Security,
-  irc: IRC
+  irc: IRC,
+  iris_s2s: IRISS2S
 };
 
 function DocumentationContent() {
