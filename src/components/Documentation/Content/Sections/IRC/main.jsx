@@ -6,7 +6,9 @@ import IRCChannelFunctions from './Texts/IRCChannelFunctions.jsx';
 import IRCChannelJoin from './Texts/IRCChannelJoin.jsx'; 
 import IRCMessaging from './Texts/IRCMessaging.jsx';
 import IRCUserState from './Texts/IRCUserState.jsx';
-import IRCRoles from './Texts/IRCRoles.jsx';import IRC_NAVBAR from './Texts/IRC-Navbar.jsx';
+import IRCSafety from '../Security/Texts/IRCSafety.jsx';
+import IRCRoles from './Texts/IRCRoles.jsx';
+import IRC_NAVBAR from './Texts/IRC-Navbar.jsx';
 
 function IRC() {
   return (
@@ -43,8 +45,8 @@ function IRC() {
 
 
       <IRCMonitoring>
-
       </IRCMonitoring>
+      <IRCSafety/>
 
     </section>
   );

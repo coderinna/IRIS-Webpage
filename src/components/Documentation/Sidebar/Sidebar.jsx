@@ -29,6 +29,7 @@ function DocumentationSidebar({ menuOpen, setMenuOpen }) {
   <a href="#documentation?path=irc" onClick={closeMenu}>IRC</a>
   <a href="#documentation?path=iris_s2s" onClick={closeMenu}>S2S</a>
   <a href="#documentation?path=architecture" onClick={closeMenu}>Järjestelmäarkkitehtuuri</a>
+  <a href="#documentation?path=security" onClick={closeMenu}>Turvallisuus</a>
 </nav>
     </aside>
   );
