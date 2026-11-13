@@ -2,7 +2,7 @@ function S2SOverview() {
   return (
     <section id="s2s-overview" className="documentation-section">
 
-      <h2>Palvelinverkon yleiskuva</h2>
+      <h2>Hajautettu palvelinverkko</h2>
 
       <p>
         IRIS-S2S (Server-to-Server) on IRIS-verkon oma palvelinten välinen
@@ -24,22 +24,31 @@ function S2SOverview() {
         kaikkien asiakkaiden tarvitsee olla yhteydessä samaan palvelimeen.
       </p>
 
-      <h3 id="s2s-network-model">Hajautettu palvelinmalli</h3>
+<h3 id="s2s-network-communication">Palvelinten välinen viestintä</h3>
+
+<p>
+  IRIS-verkon palvelimet kommunikoivat keskenään IRIS-S2S-protokollan
+  mukaisilla viesteillä. Viestien avulla palvelimet välittävät toisilleen
+  tietoja verkkoon liittyvistä tapahtumista, kuten käyttäjien liittymisistä,
+  poistumisista, nimimerkkimuutoksista ja kanavatoiminnoista.
+</p>
+
+<p>
+  Kun tapahtuma käsitellään yhdellä palvelimella, tarvittavat tiedot
+  välitetään edelleen muille verkkoon kytkeytyneille palvelimille.
+  Näin palvelimet voivat ylläpitää yhteistä käsitystä verkon käyttäjistä
+  ja kanavista sekä mahdollistaa viestinnän eri palvelimilla olevien
+  käyttäjien välillä.
+</p>
+
+      <h4 id="s2s-message-processing">Viestien käsittely</h4>
 
       <p>
-        IRIS käyttää hajautettua palvelinmallia, jossa verkko koostuu
-        itsenäisistä palvelimista. Palvelimet ylläpitävät omia
-        asiakasyhteyksiään ja osallistuvat yhteiseen verkkoon
-        palvelinten välisten yhteyksien kautta.
+        Vastaanottava palvelin tunnistaa saapuvan viestin tyypin,
+        käsittelee sen tai hylkää ja päivittää
+        tarvittaessa paikallista verkkotilaa.
       </p>
 
-      <h3 id="s2s-network-communication">Palvelinten välinen viestintä</h3>
-
-      <p>
-        Palvelimet vaihtavat keskenään tietoa käyttäjistä, kanavista
-        ja verkossa tapahtuvista muutoksista. Näin eri palvelimilla
-        olevat käyttäjät voivat osallistua samaan verkkoympäristöön.
-      </p>
 
     </section>
   );
