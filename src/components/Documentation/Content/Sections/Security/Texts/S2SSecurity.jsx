@@ -32,10 +32,13 @@ function S2SSecurity() {
 <p>Luottamus- ja valtuutusmallin kolme keskeistä periaatetta:</p>
 
 <ol>
-  <li>Authentication – Kuka palvelin on?</li>
-  <li>Authorization – Saako palvelin liittyä verkkoon?</li>
+  <li>Authentication – Kuka palvelin on? HELLO + AUTH + tunnisteen ja salaisuuden tarkistus.</li>
+  <li>Authorization – saako tämä palvelin liittyä tähän verkkoon ja mitä se saa tehdä?</li>
+  <li>
+Registration: vasta hyväksytyn valtuutuksen jälkeen palvelin lisätään verkkotopologiaan.</li>
   <li>Delegation – Saako palvelin esitellä uusia palvelimia?</li>
 </ol>
+
  {/*
 <p>
 
@@ -80,7 +83,39 @@ Nykyinen toteutus sisältää palvelimen tunnistamisen,
   turvallista ajoituksesta riippumatonta vertailua
   (crypto.timingSafeEqual).
 </p>
-
+<p>crypto.timingSafeEqual() suojaa tokenien vertailua niin sanotulta ajoitushyökkäykseltä (timing attack)
+   ei vertaile JS merkkijonoja, vaan Buffer- tai TypedArray-tavujonoja.
+  .</p>
+<div className="code-block">
+  <pre>
+{`SERVER A                              SERVER B
+   |                                      |
+   |------------- AUTH ----------------->|
+   |                                      |
+   |                               decodeAuth()
+   |                                      |
+   |                               Validate serverId
+   |                                      |
+   |                               Check authToken
+   |                                      |
+   |                               Buffer.from()
+   |                                      |
+   |                               Check token length
+   |                                      |
+   |                               timingSafeEqual()
+   |                                      |
+   |                            ┌─────────┴─────────┐
+   |                            |                   |
+   |                       TOKEN VALID        TOKEN INVALID
+   |                            |                   |
+   |                     STATES.SERVER       socket.destroy()
+   |                            |
+   |                       sendServer()
+   |                            |
+   |<-------- SERVER FLOW -------|
+   |                            |`}
+  </pre>
+</div>
       <h3>Yhteyden muodostaminen ja kättely (Authorization)</h3>
 
       <p>

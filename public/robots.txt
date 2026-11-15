@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://coderinna.github.io/IRIS-Webpage/sitemap.xml
+Sitemap: https://iri.codetar.fi/sitemap.xml
