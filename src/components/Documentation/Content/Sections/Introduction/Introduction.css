@@ -1,0 +1,51 @@
+.Documentation_Introduction {
+  width: 100%;
+}
+
+.Documentation_Introduction_Features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.Documentation_Introduction_Feature {
+  padding: 22px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--surface-color);
+  transition: border-color 0.2s ease;
+}
+
+.Documentation_Introduction_Feature:hover {
+  border-color: var(--accent-color);
+}
+
+.Documentation_Introduction_FeatureHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.Documentation_Introduction_FeatureHeader svg {
+  flex-shrink: 0;
+  color: var(--accent-color);
+}
+
+.Documentation_Introduction_FeatureHeader h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Documentation_Introduction_Feature p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .Documentation_Introduction_Features {
+    grid-template-columns: 1fr;
+  }
+}

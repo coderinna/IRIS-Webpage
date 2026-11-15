@@ -1,0 +1,33 @@
+.Documentation_IRC_Sources {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-color);
+}
+
+.Documentation_IRC_Sources h4 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.Documentation_IRC_Sources ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Documentation_IRC_Sources a {
+  font-size: 13px;
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.Documentation_IRC_Sources a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}

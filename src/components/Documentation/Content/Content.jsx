@@ -5,6 +5,8 @@ import Security from './Sections/Security/Security.jsx';
 import IRC from './Sections/IRC/main.jsx';
 import IRISS2S from './Sections/IRIS-S2S/main.jsx';
 import Architecture from './Sections/Architecture/main.jsx';
+import IrcDaemonds from './Sections/IrcDaemonds/main.jsx';
+
 
 import './css/main.css';
 
@@ -13,7 +15,8 @@ const documentationSections = {
   security: Security,
   irc: IRC,
   iris_s2s: IRISS2S,
-  architecture: Architecture
+  architecture: Architecture,
+  irc_daemonds: IrcDaemonds
 };
 
 function DocumentationContent() {
