@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 
 import Introduction from './Sections/Introduction/Introduction.jsx';
@@ -6,7 +7,7 @@ import IRC from './Sections/IRC/main.jsx';
 import IRISS2S from './Sections/IRIS-S2S/main.jsx';
 import Architecture from './Sections/Architecture/main.jsx';
 import IrcDaemonds from './Sections/IrcDaemonds/main.jsx';
-
+import NodeJS from './Sections/NodeJS/main.jsx';
 
 import './css/main.css';
 
@@ -16,13 +17,21 @@ const documentationSections = {
   irc: IRC,
   iris_s2s: IRISS2S,
   architecture: Architecture,
-  irc_daemonds: IrcDaemonds
+  irc_daemonds: IrcDaemonds,
+  'node-js': NodeJS
 };
 
 function DocumentationContent() {
+
   const getHashParams = () => {
-    const query = window.location.hash.split('?')[1] || '';
-    return new URLSearchParams(query);
+    const hash = window.location.hash;
+    const queryIndex = hash.indexOf('?');
+
+    if (queryIndex === -1) {
+      return new URLSearchParams();
+    }
+
+    return new URLSearchParams(hash.substring(queryIndex + 1));
   };
 
   const [currentPath, setCurrentPath] = useState(() => {

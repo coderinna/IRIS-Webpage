@@ -38,19 +38,21 @@ function S2SSecurity() {
 Registration: vasta hyväksytyn valtuutuksen jälkeen palvelin lisätään verkkotopologiaan.</li>
   <li>Delegation – Saako palvelin esitellä uusia palvelimia?</li>
 </ol>
+<<<<<<< HEAD
 
  {/*
+=======
+>>>>>>> 16fbfe8 (DOKUMENTAITON update  NodeJs kielestä kerrottu)
 <p>
 
 Nykyinen toteutus sisältää palvelimen tunnistamisen,
  yhteyden muodostamisen sekä verkkotopologian tekniset tarkistukset.
 
-
-  Tavoitteena on kehittää nykyisen toteutuksen päälle
+Toteutuksen päällä on
   palvelinkohtainen luottamusmalli, jossa verkon ylläpitäjä
   voi hyväksyä palvelimia, määritellä niiden oikeudet ja
   hallita sitä, miten verkon topologiaa voidaan laajentaa.
-</p>*/}
+</p>
 
 <p>
   Näin IRIS-verkosta voidaan muodostaa hallittu ja
@@ -58,6 +60,31 @@ Nykyinen toteutus sisältää palvelimen tunnistamisen,
   yhteisen AUTH-salaisuuden tunteminen ei automaattisesti
   anna palvelimelle oikeutta liittyä verkkoon.
 </p>
+
+<h3>IRIS-S2S Security -moduuli</h3>
+    
+  
+<ol>
+  <li>Authentication	Etäpalvelimen henkilöllisyyden todentaminen</li>
+  <li>Authorization	Etäpalvelimen toimintaoikeuksien tarkistaminen</li>
+  <li>Server introduction	Uusien palvelinten liittymisen valvonta</li>
+  <li>Network policy	Paikallisen verkon turvallisuussääntöjen valvonta</li>
+</ol>
+
+Vastaanottavien kehysten valtuutus – nykyinen authorizeAction.
+Lähtevien kehysten valtuutus – estetään luvattomat S2S-lähetykset.
+SERVER-kehyksen turvallisuus – palvelimen esittelyn autentikointi, identiteetin tarkistus ja valtuutus.
+TrustRegistry – palvelinkohtaiset oikeudet ja luottamussuhteet.
+NetworkPolicy ja ServerPolicy – verkon ja paikallisen palvelimen turvallisuussäännöt.
+
+1. Outbound authorization	Lähtevien S2S-kehysten oikeustarkistukset
+2. Server introduction validation	SERVER-kehyksen erillinen turvallisuusvalidointi
+3. Identity validation	Palvelimen identiteetin sitominen autentikoituun yhteyteen
+4. Credential management	Jaettujen salaisuuksien vaihto, uusiminen ja mitätöinti
+5. Permission management	Palvelinkohtaisten oikeuksien hallinta ja muutosten johdonmukainen soveltaminen
+6. Security audit	Turvallisuustapahtumien lokitus ja hylkäyssyiden seuranta
+7. Security tests	Negatiiviset testit luvattomille palvelimille ja toiminnoille
+
       <h3>Palvelinten tunnistaminen (Authentication)</h3>
 
       <p>

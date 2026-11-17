@@ -12,7 +12,7 @@ function Security() {
       className="documentation-section"
     >
       <span className="documentation-section-number">
-        05
+        06
       </span>
 
       <h1>Tietoturva</h1>
