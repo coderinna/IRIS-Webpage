@@ -38,11 +38,6 @@ function S2SSecurity() {
 Registration: vasta hyväksytyn valtuutuksen jälkeen palvelin lisätään verkkotopologiaan.</li>
   <li>Delegation – Saako palvelin esitellä uusia palvelimia?</li>
 </ol>
-<<<<<<< HEAD
-
- {/*
-=======
->>>>>>> 16fbfe8 (DOKUMENTAITON update  NodeJs kielestä kerrottu)
 <p>
 
 Nykyinen toteutus sisältää palvelimen tunnistamisen,
