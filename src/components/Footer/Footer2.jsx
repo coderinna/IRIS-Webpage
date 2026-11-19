@@ -10,16 +10,16 @@ const IrisVibeFooter = () => {
         
         <div className="iris-vibe-footer__extra">
           <div className="iris-vibe-footer__title">
-            <span className="iris-vibe-footer__heart">💗</span> Cute Girl Tuning™
+IRIS IRCd    <p className="iris-vibe-footer__text">
+Internet Reley Chat Daemond
+    </p>
           </div>
           
-          <p className="iris-vibe-footer__text">
-            IRIS IRC sisältää myös yhden ylimääräisen rasitteen. Se ei paranna mitattavasti protokollan suorituskykyä, latenssia tai muistinkäyttöä – eikä oikeastaan yhtään mitään muutakaan. 😊
-          </p>
+      
           
-          <p className="iris-vibe-footer__vibe">
-            Mutta se parantaa huomattavasti vibaa.
-          </p>
+  <p className="iris-vibe-footer__vibe">
+  © {new Date().getFullYear()} IRIS IRCd. Kaikki oikeudet pidätetään.
+</p>
         </div>
       </div>
     </footer>

@@ -12,11 +12,8 @@ export default function ProtocolPurpose() {
            <h2>Miksi oma IRIS-S2S-protokolla?</h2>
         </div>
       </div>
+      <p>Tärkeimpänä protokollaa voidaan kehittää IRIS:n omien tarpeiden mukaiseksi ja mielenkiinto omaa protokollan luomiseen</p>
 <p>
-IRIS-S2S:n viestityypit, yhteydenmuodostus ja verkkotapahtumien käsittely voidaan 
-suunnitella IRIS-verkon omien tarpeiden mukaan.
- Toteutus ei ole sidottu yleiskäyttöiseen tiedonsiirtomuotoon tai ulkopuolisen protokollan toimintamalliin. Protokollaa voidaan kehittää verkon mukana."
-  
 </p>
 
     </section>

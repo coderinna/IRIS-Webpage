@@ -6,7 +6,6 @@ const Architecture = lazy(() => import('./components/Architecture/Architecture.j
 const Protocol = lazy(() => import('./components/Protocol/Protocol.jsx'));
 const FeatureGrid = lazy(() => import('./components/FeatureGrid/FeatureGrid'));
 const ProjectImages = lazy(() => import('./components/ProjectImages/ProjectImages.jsx'));
-const Footer = lazy(() => import('./components/Footer/Footer'));
 const Licence = lazy(() => import('./components/Licence/Licence.jsx'));
 const Sanasto = lazy(() => import('./components/Sanasto/Sanasto.jsx'));
 const Footer2 = lazy(() => import('./components/Footer/Footer2.jsx'));
@@ -70,7 +69,6 @@ function App() {
 
         {!isDocumentSectionOpen && (
           <>
-            <Footer />
             <Footer2 />
           </>
         )}

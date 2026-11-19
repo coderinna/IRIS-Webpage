@@ -12,12 +12,6 @@ const glossaryData = [
   { term: "IRIS Network", definition: "Useista IRIS-palvelimista muodostuva IRC-verkko." },
   { term: "IRC Client", definition: "IRC-asiakasohjelma, kuten irssi, WeeChat tai HexChat." },
   { term: "IRC Server", definition: "IRIS IRCd -palvelin, joka osallistuu IRC-verkon toimintaan." },
-  { term: "Server Link", definition: "Kahden IRIS-palvelimen välinen yhteys IRIS Protocolin kautta." },
-  { term: "Network State", definition: "Verkossa ylläpidettävä tieto käyttäjistä, kanavista, palvelimista ja niiden tilasta." },
-  { term: "Event Bus", definition: "IRISin sisäinen tapahtumaväylä, jonka kautta järjestelmän komponentit kommunikoivat tapahtumien avulla." },
-  { term: "Core", definition: "IRISin ydinlogiikka ja palvelimen tilasta vastaava kerros." },
-  { term: "Services", definition: "IRC-palvelut, kuten NickServ, ChanServ ja operointiin liittyvät palvelut." },
-  { term: "Transport", definition: "Verkkoyhteyden kuljetuskerros, esimerkiksi TCP tai TLS." }
 ];
 
 const IrisGlossary = () => {

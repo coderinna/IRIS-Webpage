@@ -3,12 +3,6 @@ import './Hero.css';
 import networkImage from './IRIS.png';
 import hereImage from './Screenshot-IRIS1.png'
 
-const heroStats = [
-  'IRC Daemon',
-  'IRIS-S2S',
-  'Distributed Network'
-];
-
 function Hero() {
   const handleExplore = () => {
     document
@@ -18,6 +12,7 @@ function Hero() {
         block: 'start'
       });
   };
+
 
   return (
     <section className="hero">
@@ -37,7 +32,7 @@ function Hero() {
 
 
         <p className="hero__eyebrow">
-          🌸BECAUSE IRC IS LEGEND
+      Legendary IRC. Reimagined for the Modern Era.
         </p>
 
         <h1 className="hero__title">
@@ -52,21 +47,9 @@ function Hero() {
         </p>
 
 <p className="hero__tribute">
-  🇫🇮 Suomesta, niinku alkuperäinenkin. ❤️ You are awesome, Jarkko!
+🇫🇮 Suomesta – kuten alkuperäinen IRC-daemonikin.
   <br /></p>
 
-  🌸 Tyttöjen tekemä IRCd. ^^
-
-        <div className="hero__stats">
-          {heroStats.map((stat) => (
-            <span
-              key={stat}
-              className="hero__stat"
-            >
-              {stat}
-            </span>
-          ))}
-        </div>
 
 <div className="hero__image">
   <img

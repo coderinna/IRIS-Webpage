@@ -11,10 +11,9 @@ function Protocol() {
   return (
     <main id="protocol" className="protocol-page">
 
+      <section className="protocol-container">
 <ProtocolHero />
 
-      <section className="protocol-container">
-<ProtocolIntro />
 <ProtocolSpecs  />
 
 <ProtocolMessages />

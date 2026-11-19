@@ -11,14 +11,9 @@ function ProtocolHero() {
         <h1>IRIS S2S Protocol</h1>
 
         <p>
-          Palvelinten välinen protokolla hajautettua IRIS-verkkoa varten.
+          Palvelinten välinen oma protokolla hajautettua IRIS-verkkoa varten.
         </p>
 
-        <div className="protocol-badge-row">
-          <span className="protocol-badge">IRIS-S2S</span>
-          <span className="protocol-badge">Binary Protocol</span>
-          <span className="protocol-badge">Multi-server</span>
-        </div>
       </div>
     </section>
   );
